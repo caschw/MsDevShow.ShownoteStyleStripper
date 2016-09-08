@@ -1,8 +1,8 @@
 ### MsDevShow.ShownoteStyleStripper
 
-This tool is optimized for removing extraneous styles and HTML elements that persist after conversting shownotes from HTML into Markdown. Inline stlyes and spans just get in the way.
+This tool is optimized for removing extraneous styles and HTML elements that persist after converting shownotes from HTML into Markdown. Inline stlyes and spans just get in the way.
 
-The Core logic is three regex files located in the Common Project. A UWP interface exists for those just wanting to try it out and a Windows Service exists to let the conversion happen automatically.
+The core logic is three regex files located in the Common Project. Anything that matches the regex patterns get replaced with an empty string. A UWP interface exists for those just wanting to try it out and a Windows Service exists to let the conversion happen automatically.
 
 ### Installing the service
 
