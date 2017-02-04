@@ -10,6 +10,7 @@ namespace MsDevShow.ShownoteStyleStripper.Service
         private readonly EventLog _log;
         private static string FolderPath = @"C:\MS Dev Show\shownotes";
         private const string Filename = "input.htm";
+        public const string ShownotesFilename = "shownotes.md";
         private readonly FileSystemWatcher _watcher;
 
         public WatchAndRip()
@@ -58,6 +59,7 @@ namespace MsDevShow.ShownoteStyleStripper.Service
         {
             _watcher.EnableRaisingEvents = false;
             action();
+            Pandocumator.ExecuteDocumentTransformation(FolderPath, Filename, ShownotesFilename);
             _watcher.EnableRaisingEvents = true;
         }
 
