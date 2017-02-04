@@ -12,7 +12,7 @@ namespace MsDevShow.ShownoteStyleStripper.Service
             {
                 return;
             }
-            var arguments = $"-i \"{System.IO.Path.Combine(folderPath, inputFilename)}\" -o \"{System.IO.Path.Combine(folderPath, outputFilename)}\"";
+            var arguments = $"-i \"{Path.Combine(folderPath, inputFilename)}\" -o \"{Path.Combine(folderPath, outputFilename)}\"";
             var p = new Process
             {
                 StartInfo = new ProcessStartInfo
